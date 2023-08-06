@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: serif;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+h5 {
+    color: #049DAB;
+    text-align: center;
+    transition: all 0.3s linear;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.color-d {
+    color: #f5f5f5;
+}
+
+.line-mf {
+    width: 40px;
+    height: 5px;
+    background-color: #f5b9a7;
+    margin: 0 auto;
+}
+
+
+/*------/ Box /------*/
+
+.box-pl2 {
+    padding-left: 2rem;
+}
+
+.box-shadow-full {
+    padding: 3rem 1.25rem;
+    position: relative;
+    background-color: #fff;
+    margin-bottom: 3rem;
+    z-index: 2;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/*------/ Back to top button /------*/
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    background: #0078ff;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 16px;
+    border-radius: 50%;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+    z-index: 11;
+}
+
+.back-to-top i {
+    padding-top: 12px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 15px;
+    }
+}
+
+
+/*------/ Button /------*/
+
+.button {
+    display: inline-block;
+    padding: .3rem .6rem;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1rem;
+    border-radius: .3rem;
+    border: 1px solid transparent;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:hover {
+    background-color: #0062d3;
+    color: #fff;
+    transition: all 500ms ease;
+}
+
+.button-a {
+    background-color: #0078ff;
+    color: #fff;
+    border-color: #cde1f8;
+}
+
+.button-big {
+    padding: .9rem 2.3rem;
+    font-size: 1.2rem;
+}
+
+.button-rouded {
+    border-radius: 5rem;
+}
+
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+}
+
+/*--------------------------------------------------------------
+# Nav Bar
+--------------------------------------------------------------*/
+
+.navbar {
+    background: #50C878 !important;
+    border-bottom: 1px solid #ddd;
+    font-family: BerlinSansFBDemiBold;
+    height: 6rem;
+}
+
+.nav-content {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.navbar-brand {
+    padding-left: 5rem;
+}
+
+.nav-item .nav-link.active {
+    color: var(--color-base) !important;
+}
+
+.navbar .nav-item:hover .nav-link {
+    color: var(--color-base) !important;
+}
+
+.main-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+nav ul li {
+    font-weight: 600;
+    display: block;
+    padding: 0 0.6rem;
+    font-size: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+nav ul li a {
+    color: #1d113e !important;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: color 0.4s ease;
+    -o-transition: color 0.4s ease;
+    transition: color 0.4s ease;
+}
+
+nav ul li a:hover {
+    transform: scale(1.1);
+}
+
+nav ul li ul {
+    color: #50C878 !important;
+    margin-top: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    transform: scaleY(0);
+    transform-origin: 0 0 0;
+    transition: all 0.5s ease 0s;
+    width: 250px;
+    z-index: 99999;
+    background: #50C878 !important;
+    padding: 0;
+    left: 0;
+}
+
+nav ul li ul>li {
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid #4a444a;
+}
+
+nav ul li ul>li>a {
+    padding: 10px 10px 10px 15px;
+    display: block;
+    color: #ffffff;
+}
+
+nav ul li ul>li:last-child {
+    border-bottom: none;
+}
+
+nav ul li ul>li:hover {
+    background: #d39fd3;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li ul>li:hover a {
+    color: #ffffff;
+}
+
+nav ul li ul>li:hover a:before {
+    opacity: 0;
+}
+
+nav ul li:hover ul {
+    opacity: 1;
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+nav ul li .mega-menu-area {
+    padding: 18px 35px;
+    width: 688px;
+    left: -208px;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul li .mega-menu-area {
+        left: -324px;
+    }
+}
+
+nav ul li .mega-menu-area>li {
+    width: 141px;
+    border-bottom: none;
+    display: inline-block;
+    margin-right: 14px;
+}
+
+nav ul li .mega-menu-area>li:hover {
+    background: transparent!important;
+}
+
+nav ul li .mega-menu-area>li:hover>a {
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li .mega-menu-area>li:hover>a:hover {
+    color: #ffffff;
+    background: #d32f2f;
+    padding-left: 10px;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+nav ul li .mega-menu-area>li a {
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid #433d3d;
+}
+
+nav ul li .mega-menu-area>li a:last-child {
+    border-bottom: none;
+}
+
+nav ul li .mega-menu-area>li:last-child {
+    margin-right: 0;
+}
+
+nav ul li:hover>a,
+nav ul .active>a {
+    position: relative;
+}
+
+nav ul li:hover>a:before,
+nav ul .active>a:before {
+    opacity: 1;
+    width: 57%;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+
+/* Hero Carousel
+                    --------------------- */
+
+.carousel-item {
+    position: relative;
+    font-family: BerlinSansFBDemiBold;
+}
+
+.carousel-item1 {
+    background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item2 {
+    background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-item3 {
+    background: -o-linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background: linear-gradient(45deg, rgba(35, 35, 35, 0.4), rgba(35, 35, 35, 0.7));
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-caption {
+    width: 800px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -55%);
+    -ms-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+}
+
+.carousel-caption h5 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgb(37, 33, 37);
+}
+
+.carousel-caption p {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 1rem 1.8rem;
+    background: var(--color-base);
+}
+
+.carousel-caption p a {
+    font-size: 1.3rem;
+    color: #3184a5;
+    text-decoration: none;
+}
+
+.carousel-caption p a:hover {
+    color: #3184a5;
+}
+
+.carousel-caption p a:active {
+    background: #0062d3 !important;
+}
+
+
+/* -------Products------ */
+
+.container .products-container {
+    padding: 0rem 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container .products-container .product {
+    height: 25em;
+    width: 20em;
+    text-align: center;
+    padding: 2rem 2rem;
+    background: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    outline: .1rem solid #ccc;
+    outline-offset: -1.5rem;
+    cursor: pointer;
+}
+
+.container .products-container .product img {
+    height: 50%;
+    width: 100%;
+}
+
+.container .products-container .product h3 {
+    font-size: 1rem;
+    color: #444;
+}
+
+.container .products-container .product:hover h3 {
+    color: #27ae60;
+}
+
+.container .products-container .product .price {
+    font-size: 0.5rem;
+    color: #444;
+}
+/*-----------------------footer------------------*/
+
+footer {
+    padding-top: 2rem;
+    background: #0f0d17;
+    font-family: 'Berlin Sans FB';
+}
+
+.footer-content {
+    padding-bottom: 2rem;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.footer-col {
+    padding-right: 1rem;
+    width: 33%;
+}
+
+.footer-col1 {
+    width: 440px;
+    padding-bottom: 1rem;
+}
+
+.footer-col-title {
+    color: #fff;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer-col-title strong span {
+    color: #f0a62e;
+}
+
+.icons-info a {
+    color: #fff;
+    font-size: 22px;
+}
+
+.icons-info img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.location {
+    margin-left: 1rem;
+}
+
+.social-links {
+    margin-top: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.social-link {
+    margin-right: 0.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 2.4rem;
+    width: 2.4rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.social-link>span {
+    font-size: 1.1rem;
+}
+
+.address>p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+
+.address>p>strong {
+    width: 3.8rem;
+    color: #f0a62e;
+    letter-spacing: 1px;
+}
+
+.address>p>a {
+    color: #fff;
+}
+
+
+/* ********************************footer end************************************ */
